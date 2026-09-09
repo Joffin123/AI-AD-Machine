@@ -1,4 +1,3 @@
-import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
 import { CornerArrow } from "@/components/ui/icons";
@@ -44,18 +43,20 @@ export function Future() {
         </Reveal>
       </div>
 
-      {/* Vertical-format creative showcase, scrolling on a loop */}
+      {/* Vertical-format creative showcase, autoplaying on an infinite loop */}
       <div className="group relative mt-12 overflow-hidden lg:mt-16">
         <div className="flex w-max animate-marquee-slow items-center group-hover:[animation-play-state:paused]">
           {reels.map((src, index) => (
             <div key={`${src}-${index}`} className="shrink-0 px-2 lg:px-3">
-              <div className="relative aspect-[9/16] w-[150px] overflow-hidden rounded-[10px] border-[0.5px] border-black/80 bg-cream sm:w-[180px] lg:w-[216px]">
-                <SmartImage
+              <div className="relative aspect-[9/16] w-[150px] overflow-hidden rounded-[10px] border-[0.5px] border-black/80 bg-ink sm:w-[180px] lg:w-[216px]">
+                <video
                   src={src}
-                  alt=""
-                  fill
-                  sizes="216px"
-                  className="object-cover"
+                  className="absolute inset-0 h-full w-full object-cover"
+                  muted
+                  loop
+                  playsInline
+                  autoPlay
+                  preload="metadata"
                 />
               </div>
             </div>

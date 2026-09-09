@@ -169,10 +169,6 @@ h2 {
   animation: draw-highlight 0.7s var(--ease-out-expo) 0.25s forwards;
 }
 
-.marker-ink::before {
-  background-color: var(--color-ink);
-}
-
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

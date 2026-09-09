@@ -1,7 +1,7 @@
 import { SmartImage } from "@/components/ui/smart-image";
 import { Reveal } from "@/components/ui/reveal";
 import { CtaButton } from "@/components/ui/cta-button";
-import { Blob, BrushStroke, CircleScribble, GridLines } from "@/components/ui/decor";
+import { Blob, CircleScribble, GridLines } from "@/components/ui/decor";
 import { CalendarIcon, ClockIcon, PresentIcon } from "@/components/ui/icons";
 import { OfferTimer } from "@/components/offer-timer";
 import { EVENT, HERO } from "@/lib/site-data";
@@ -52,9 +52,6 @@ export function Hero() {
         </Reveal>
 
         <div className="relative mt-10 grid items-center gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 xl:grid-cols-[minmax(0,1fr)_360px]">
-          {/* Brush stroke sits behind the sub-headline on large screens */}
-          <BrushStroke className="pointer-events-none absolute -top-16 left-0 hidden h-auto w-[105%] lg:block" />
-
           {/* Sub-headline */}
           <Reveal
             delay={140}

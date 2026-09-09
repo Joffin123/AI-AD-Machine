@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" width="800" height="1100" fill="none"><rect width="800" height="1100" fill="#181201"/>
-     <circle cx="400" cy="300" r="420" fill="#dffa60" opacity="0.10"/>
-     <circle cx="400" cy="390" r="150" fill="#dffa60" opacity="0.9"/>
-     <path d="M150 1100c0-160 112-290 250-290s250 130 250 290z" fill="#dffa60" opacity="0.9"/>
-     <path d="M400 300c50 0 84 34 84 82s-38 96-84 96-84-48-84-96 34-82 84-82z" fill="#181201"/>
-     <rect x="60" y="60" width="680" height="980" rx="24" stroke="#d4f92f" stroke-width="4" opacity="0.35"/>
-     <text x="400" y="1020" text-anchor="middle" font-family="Verdana,Geneva,sans-serif" font-size="26" letter-spacing="4" fill="#f1ede5" opacity="0.65">PHOTO PLACEHOLDER</text></svg>

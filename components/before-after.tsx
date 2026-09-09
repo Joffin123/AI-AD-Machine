@@ -24,10 +24,10 @@ export function BeforeAfter() {
         {/* Pipeline */}
         <Reveal delay={100} className="mt-10 lg:mt-14">
           <div className="rounded-2xl bg-acid p-5 lg:rounded-3xl lg:p-8">
-            <p className="text-center text-[13px] font-medium text-ink lg:text-lg">
+            <p className="text-center font-display text-[13px] font-medium text-ink lg:text-lg">
               You&apos;ll know how to think through:
             </p>
-            <p className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center text-lg font-bold leading-tight text-ink sm:text-2xl lg:mt-5 lg:text-[35px]">
+            <p className="mt-3 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-center font-display text-lg font-bold leading-tight text-ink sm:text-2xl lg:mt-5 lg:text-[35px]">
               {PIPELINE.map((step, index) => (
                 <span key={step} className="inline-flex items-center gap-2">
                   <span className="transition-transform duration-300 ease-[var(--ease-out-expo)] hover:scale-110">
@@ -54,7 +54,7 @@ export function BeforeAfter() {
               {BEFORE.map((line) => (
                 <li
                   key={line}
-                  className="text-[13px] leading-snug text-ink opacity-65 lg:text-[22px]"
+                  className="font-display text-[13px] leading-snug text-ink opacity-65 lg:text-[22px]"
                 >
                   {line}
                 </li>
@@ -72,7 +72,7 @@ export function BeforeAfter() {
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-acid transition-transform duration-300 ease-[var(--ease-out-expo)] group-hover:scale-110 lg:h-10 lg:w-10">
                     <CheckIcon className="h-[18px] w-[18px] text-ink lg:h-6 lg:w-6" />
                   </span>
-                  <span className="text-[12px] leading-snug text-ink lg:text-[22px]">
+                  <span className="font-display text-[12px] leading-snug text-ink lg:text-[22px]">
                     {line}
                   </span>
                 </li>
@@ -83,10 +83,10 @@ export function BeforeAfter() {
 
         {/* Closing lines */}
         <Reveal delay={120} className="mx-auto mt-12 max-w-[980px] lg:mt-20">
-          <p className="text-center text-lg font-medium text-ink lg:text-3xl">
+          <p className="text-center font-display text-lg font-medium text-ink lg:text-3xl">
             The goal isn’t to make more AI content.
           </p>
-          <p className="mt-2 text-balance text-center text-lg font-bold text-ink lg:text-3xl">
+          <p className="mt-2 text-balance text-center font-display text-lg font-bold text-ink lg:text-3xl">
             It’s to know how to turn it into winning, performing ads.
           </p>
         </Reveal>

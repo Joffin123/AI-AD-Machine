@@ -31,7 +31,7 @@ export function SectionHeading({
       {subtitle && (
         <Reveal delay={100}>
           <p
-            className={`mx-auto mt-5 max-w-[820px] text-pretty text-[13px] leading-relaxed sm:text-base lg:mt-6 lg:text-xl ${body}`}
+            className={`mx-auto mt-5 max-w-[820px] text-pretty font-display text-[13px] leading-relaxed sm:text-base lg:mt-6 lg:text-xl ${body}`}
           >
             {subtitle}
           </p>

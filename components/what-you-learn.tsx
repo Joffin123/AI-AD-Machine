@@ -23,19 +23,13 @@ export function WhatYouLearn() {
               delay={(index % 3) * 110}
               className="h-full"
             >
-              <article className="group relative h-full overflow-hidden rounded-2xl border border-ink bg-cream p-4 transition-transform duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1.5 sm:p-6 lg:rounded-3xl lg:p-8">
-                {/* Soft acid wash that swells on hover */}
-                <span
-                  aria-hidden
-                  className="pointer-events-none absolute -left-24 top-2 h-[420px] w-[420px] rounded-full bg-acid-pale transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-110 lg:h-[572px] lg:w-[572px]"
-                />
-
+              <article className="group relative h-full overflow-hidden rounded-2xl border border-ink bg-gradient-to-br from-cream to-acid-pale p-4 transition-transform duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-1.5 sm:p-6 lg:rounded-3xl lg:p-8">
                 <div className="relative">
                   <CurriculumIcon
                     name={item.icon}
                     className="h-5 w-5 text-ink transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:-rotate-6 sm:h-7 sm:w-7 lg:h-9 lg:w-9"
                   />
-                  <h3 className="mt-4 text-balance text-[13px] font-bold leading-snug text-ink sm:text-lg lg:mt-6 lg:text-2xl lg:font-semibold">
+                  <h3 className="mt-4 font-display text-balance text-[13px] font-bold leading-snug text-ink sm:text-lg lg:mt-6 lg:text-2xl lg:font-semibold">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-pretty text-[10px] leading-relaxed text-ink-2 sm:text-sm lg:mt-3 lg:text-lg">

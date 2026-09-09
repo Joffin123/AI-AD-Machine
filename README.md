@@ -30,14 +30,16 @@ and is available as normal Tailwind utilities (`bg-cream`, `text-acid-2`, …):
 
 Two families, both self-hosted by `next/font` (no requests leave the origin):
 
-- **Body — Inter**, via `next/font/google`. Drives `--font-sans` and everything
-  that isn't a headline or a quote.
+- **Body — Inter**, via `next/font/google`. Drives `--font-sans`. Left as the
+  default on curriculum-card body copy and not much else — nearly everything
+  else on the page opts into the display face below.
 - **Headlines — "Adgram Display"**, a local variable font at
   [`app/fonts/adgram-display-variable.woff2`](app/fonts/adgram-display-variable.woff2).
-  Drives `--font-display`, applied to `h1`/`h2` in
-  [`globals.css`](app/globals.css) plus the `font-display` utility on CTA
-  buttons, the hero badge/subtitle, card titles, the "Who This Is For" body
-  copy, and the producer name/stat figures.
+  Drives `--font-display`, applied to `h1`/`h2` globally in
+  [`globals.css`](app/globals.css) and via the `font-display` utility on
+  everything else per-component: CTAs, section subtitles, card titles and
+  body copy, the pipeline/before/after strip, the producer bio band, and the
+  FAQ.
 - **Testimonial quotes — Playfair Display**, via `next/font/google`. Drives
   `--font-quote`, applied only to the quote line in
   [`testimonials.tsx`](components/testimonials.tsx) via the `font-quote`
@@ -76,25 +78,31 @@ registerUrl: "#register",  // → your checkout / registration link
 
 ## Images
 
-Real assets are in for the hero photo, the "Who This Is For" photos, and the
-brand logos. What's left is still placeholder art generated to match the
-palette — replace it in place, keeping the filenames, and nothing else needs
-to change:
+Real assets are in for the hero photo, the producer's full-bio photo, the
+"Who This Is For" photos, and the brand logos. What's left is still
+placeholder art generated to match the palette — replace it in place, keeping
+the filenames, and nothing else needs to change:
 
-| Path                                    | What it is                     | Aspect      |
-| ---------------------------------------- | ------------------------------- | ----------- |
-| `public/illustrations/producer-hero.png` | Reyon's photo — hero card       | 304:270     |
-| `public/illustrations/producer.svg`      | *Placeholder* — full bio photo  | portrait    |
-| `public/illustrations/audience-1…5.png`  | "Who this is for" photos        | varies      |
-| `public/illustrations/perk-1…6.svg`      | *Placeholder* — studio perks    | ~5:4        |
-| `public/illustrations/reel-1…6.svg`      | *Placeholder* — ad creatives    | 9:16        |
-| `public/brands/brand-1…6.png`            | Client logos                    | native size |
+| Path                                      | What it is                   | Aspect      |
+| ------------------------------------------ | ----------------------------- | ----------- |
+| `public/illustrations/producer-hero.png`   | Reyon's photo — hero card      | 304:270     |
+| `public/illustrations/meet-producer.png`   | Reyon's photo — full bio band  | 403:612     |
+| `public/illustrations/audience-1…5.png`    | "Who this is for" photos       | varies      |
+| `public/illustrations/perk-1…6.svg`        | *Placeholder* — studio perks   | ~5:4        |
+| `public/brands/brand-1…6.png`              | Client logos                   | native size |
+
+The closing creative-reel marquee (`SHOWCASE` in
+[`site-data.ts`](lib/site-data.ts), rendered in
+[`future.tsx`](components/future.tsx)) plays real ad videos straight from the
+AdGraam CDN rather than local files — 14 clips, each looping, muted,
+autoplaying, `<video>` not `next/image`. Swap the array to change which clips
+show; nothing else needs to change.
 
 The hero card and the full producer-bio section use two different fields —
 `HERO.producer.image` and `PRODUCER.image` in
-[`site-data.ts`](lib/site-data.ts) — because the supplied photo is a landscape
-crop that only fits the hero card; the bio section is still on its placeholder
-portrait pending a matching photo.
+[`site-data.ts`](lib/site-data.ts) — because they're two different crops
+(landscape for the hero card, portrait for the bio band), both now real
+photos.
 
 Brand logos keep their own intrinsic `width`/`height` in the `BRANDS` array
 (real logos, real — and differing — aspect ratios) rather than one fixed size.
@@ -134,8 +142,11 @@ lib/
 - **Scroll reveal** — `components/ui/reveal.tsx` adds `.is-revealed` via
   `IntersectionObserver`; the transition itself is CSS. Supports `up`/`left`/
   `right`/`zoom` and a `delay` for staggering rows.
-- **Marker highlight** — `.marker` draws an acid (or ink) bar behind a phrase
-  once its section reveals.
+- **Marker highlight** — `.marker` draws an acid bar behind a phrase once its
+  section reveals (used for the acid-highlighter effect, e.g. "AI Ad Machine"
+  in the testimonials heading). The solid black title box in "Who This Is
+  For" is a plain `bg-ink` span with `box-decoration-clone`, not this — it
+  needs a real per-line background box, not a highlighter sweep.
 - **Sticky card deck** — the "Who This Is For" cards pin at increasing offsets
   so they pile up as you scroll.
 - **Marquees** — brand logos and the creative reel strip loop with pure CSS and

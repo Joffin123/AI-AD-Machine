@@ -7,12 +7,12 @@ import { EVENT, PASS_PERKS, STUDIO_PERKS } from "@/lib/site-data";
 
 /** Hand-drawn looking blob silhouettes, one per studio perk. */
 const BLOB_SHAPES = [
-  "58% 42% 46% 54% / 52% 46% 54% 48%",
-  "44% 56% 62% 38% / 46% 58% 42% 54%",
-  "62% 38% 42% 58% / 58% 44% 56% 42%",
-  "48% 52% 58% 42% / 60% 42% 58% 40%",
-  "56% 44% 38% 62% / 44% 56% 44% 56%",
-  "40% 60% 54% 46% / 56% 40% 60% 44%",
+  "62% 38% 40% 60% / 45% 42% 58% 55%",
+  "38% 62% 58% 42% / 55% 60% 40% 45%",
+  "58% 42% 62% 38% / 42% 58% 45% 55%",
+  "42% 58% 38% 62% / 58% 45% 55% 40%",
+  "60% 40% 55% 45% / 40% 55% 45% 62%",
+  "45% 55% 42% 58% / 62% 40% 58% 42%",
 ];
 
 export function WebinarExtras() {
@@ -22,7 +22,7 @@ export function WebinarExtras() {
         <SectionHeading>More Than Just a Webinar</SectionHeading>
 
         <Reveal delay={90}>
-          <p className="mt-5 text-center text-base font-semibold text-ink sm:text-xl lg:mt-6 lg:text-[28px]">
+          <p className="mt-5 text-center font-display text-base font-semibold text-ink sm:text-xl lg:mt-6 lg:text-[28px]">
             🎁 What You Get With Your {EVENT.price} Pass
           </p>
         </Reveal>
@@ -56,7 +56,7 @@ export function WebinarExtras() {
                   <h3 className="mt-3 font-display text-lg font-bold text-ink sm:text-2xl md:mt-0 lg:text-[32px] lg:font-semibold">
                     {perk.title}
                   </h3>
-                  <p className="mt-2 text-pretty text-[11px] leading-relaxed text-ink sm:text-sm lg:mt-4 lg:text-lg">
+                  <p className="mt-2 text-pretty font-display text-[11px] leading-relaxed text-ink sm:text-sm lg:mt-4 lg:text-lg">
                     {perk.body}
                   </p>
                 </div>
@@ -67,7 +67,7 @@ export function WebinarExtras() {
 
         {/* Studio perks */}
         <Reveal delay={80}>
-          <p className="mx-auto mt-14 max-w-[900px] text-center text-xl font-bold text-ink sm:text-3xl lg:mt-20 lg:text-4xl">
+          <p className="mx-auto mt-14 max-w-[900px] text-center font-display text-xl font-bold text-ink sm:text-3xl lg:mt-20 lg:text-4xl">
             And If You Join AI Ad Machine Studio…
           </p>
         </Reveal>
@@ -94,10 +94,10 @@ export function WebinarExtras() {
                   />
                 </div>
 
-                <h3 className="mt-5 text-balance text-[15px] font-semibold text-ink lg:text-[17px]">
+                <h3 className="mt-5 text-balance font-display text-[15px] font-semibold text-ink lg:text-[17px]">
                   {perk.title}
                 </h3>
-                <p className="mt-2 max-w-[280px] text-pretty text-xs leading-relaxed text-ink lg:text-[13px]">
+                <p className="mt-2 max-w-[280px] text-pretty font-display text-xs leading-relaxed text-ink lg:text-[13px]">
                   {perk.body}
                 </p>
               </article>

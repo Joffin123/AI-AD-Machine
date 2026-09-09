@@ -32,7 +32,7 @@ export function WhoThisIsFor() {
                   <div className="order-2 flex flex-col justify-center gap-3 px-6 py-6 text-center sm:px-9 lg:order-1 lg:gap-4 lg:px-[73px] lg:py-14 lg:text-left">
                     <h3 className="font-display text-balance text-[17px] font-semibold leading-snug sm:text-2xl lg:text-[32px]">
                       {item.highlight ? (
-                        <span className="marker marker-ink text-cream">
+                        <span className="box-decoration-clone rounded bg-ink px-2 py-0.5 text-cream lg:px-3 lg:py-1">
                           {item.title}
                         </span>
                       ) : (

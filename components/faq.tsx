@@ -39,7 +39,7 @@ export function Faq() {
                       onClick={() => setOpen(isOpen ? -1 : index)}
                       className="flex w-full items-center justify-between gap-4 p-4 text-left lg:p-6"
                     >
-                      <span className="text-[13px] font-semibold leading-snug text-ink lg:text-xl">
+                      <span className="font-display text-[13px] font-semibold leading-snug text-ink lg:text-xl">
                         {item.q}
                       </span>
                       <span
@@ -65,7 +65,7 @@ export function Faq() {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="px-4 pb-4 text-[12px] leading-relaxed text-ink lg:px-6 lg:pb-6 lg:text-lg">
+                      <p className="px-4 pb-4 font-display text-[12px] leading-relaxed text-ink lg:px-6 lg:pb-6 lg:text-lg">
                         {item.a}
                       </p>
                     </div>

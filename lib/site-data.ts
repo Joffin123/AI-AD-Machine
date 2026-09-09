@@ -204,7 +204,7 @@ export const PRODUCER = {
   eyebrow: "Meet Your Producer",
   name: "Reyon Mathai",
   role: "Performance-Driven Storyteller",
-  image: "/illustrations/producer.svg",
+  image: "/illustrations/meet-producer.png",
   intro: "10 years of experience in communications and marketing",
   bio: [
     "His specialisation lies in performance-first AI video advertising, creating ads built to convert, not just look real.",
@@ -218,13 +218,22 @@ export const PRODUCER = {
   ],
 };
 
+/** Real ad creatives, self-hosted on the AdGraam CDN. */
 export const SHOWCASE = [
-  "/illustrations/reel-1.svg",
-  "/illustrations/reel-2.svg",
-  "/illustrations/reel-3.svg",
-  "/illustrations/reel-4.svg",
-  "/illustrations/reel-5.svg",
-  "/illustrations/reel-6.svg",
+  "https://cdn.adgraam.com/landing-page-assets/Novra%20Slip%20On%20.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-16%20at%2009.35.49.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-16%20at%2009.35.51.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-16%20at%2009.36.16.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-16%20at%2009.36.18.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-18%20at%2016.21.20%20(1).mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-26%20at%2012.13.41%20(1).mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-27%20at%2017.55.06.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-29%20at%2017.10.14.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-07-01%20at%2019.26.32.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-07-01%20at%2020.12.08.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/seasoul_product_final.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/Powerlook%20Jersey-02.mp4",
+  "https://cdn.adgraam.com/landing-page-assets/WhatsApp%20Video%202026-06-19%20at%2013.46.19.mp4",
 ];
 
 export const FAQS = [
