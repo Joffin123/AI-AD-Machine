@@ -1,3 +1,9 @@
+import illus1 from "@/public/illus-1.png";
+import illus2 from "@/public/illus-2.png";
+import illus3 from "@/public/illus-3.png";
+import illus4 from "@/public/illus-4.png";
+import illus5 from "@/public/illus-5.png";
+
 export const EVENT = {
   /** Swap these for the real values once the date is locked in. */
   dateLabel: "DD:MM:YYYY",
@@ -154,36 +160,37 @@ export const PASS_PERKS = [
   },
 ];
 
+/**
+ * Statically imported so Next reads each PNG's real intrinsic size. These
+ * illustrations are re-exported often and no two share an aspect ratio, so
+ * hardcoding width/height here would reserve the wrong box and shift the
+ * layout as each one loads.
+ */
 export const STUDIO_PERKS = [
   {
     title: "50+ Hook & Script Templates",
     body: "A ready-to-use vault to help you create stronger ads faster.",
-    image: "/illus-1.png",
+    image: illus1,
   },
   {
     title: "AI Assistant + Competitor Analysis",
     body: "Get AI-powered support and free competitor analysis through the community.",
-    image: "/illus-2.png",
+    image: illus2,
   },
   {
     title: "Community Credit Pricing",
     body: "Get ongoing credits at a rate lower than the public price.",
-    image: "/illus-3.png",
+    image: illus3,
   },
   {
     title: "Real Brand Work Opportunities",
     body: "Get listed in the talent pool for potential brand-work referrals.",
-    image: "/illus-4.png",
+    image: illus4,
   },
   {
     title: "Weekly Rewards & Recognition",
     body: "Weekly credit bounties, Creative of the Week and certification.",
-    image: "/illus-5.png",
-  },
-  {
-    title: "Optional DFY Starter Pack",
-    body: "Get extra credits + 10 done-for-you ad templates for ₹5,999.",
-    image: "/illus-6.png",
+    image: illus5,
   },
 ];
 

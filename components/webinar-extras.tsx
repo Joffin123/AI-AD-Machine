@@ -63,23 +63,24 @@ export function WebinarExtras() {
         </Reveal>
 
 
-        <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-8">
+        <ul className="mt-8 flex flex-wrap justify-center gap-6 lg:mt-12 lg:gap-x-6 lg:gap-y-8">
           {STUDIO_PERKS.map((perk, index) => (
             <Reveal
               key={perk.title}
               as="li"
               delay={(index % 3) * 110}
-              className="h-full"
+              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]"
             >
               {/* The image is the whole card — shape, icon, title and body
-                  are all baked into the illustration itself. */}
-              <div className="group mx-auto flex h-full w-full max-w-[340px] items-center transition-transform duration-700 ease-[var(--ease-out-expo)] hover:-translate-y-2 hover:rotate-1">
+                  are all baked into the illustration itself. The fixed
+                  aspect box keeps every card the same height even though the
+                  exports don't all share one aspect ratio. */}
+              <div className="group mx-auto aspect-[300/280] w-full max-w-[340px] transition-transform duration-700 ease-[var(--ease-out-expo)] hover:-translate-y-2 hover:rotate-1">
                 <SmartImage
                   src={perk.image}
                   alt={`${perk.title} — ${perk.body}`}
-                  width={640}
-                  height={574}
-                  className="h-auto w-full object-contain transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105"
+                  sizes="(min-width: 1024px) 340px, (min-width: 640px) 50vw, 100vw"
+                  className="h-full w-full object-contain transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105"
                 />
               </div>
             </Reveal>
