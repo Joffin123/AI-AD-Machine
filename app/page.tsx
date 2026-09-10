@@ -1,5 +1,5 @@
 import { Hero } from "@/components/hero";
-import { OfferBar, StickyOfferBar } from "@/components/offer-bar";
+import { OfferBar } from "@/components/offer-bar";
 import { Testimonials } from "@/components/testimonials";
 import { Brands } from "@/components/brands";
 import { WhoThisIsFor } from "@/components/who-this-is-for";
@@ -16,7 +16,6 @@ export default function Home() {
       {/* Bottom padding keeps the last section clear of the sticky CTA bar */}
       <main className="pb-24 lg:pb-32">
         <Hero />
-        <OfferBar />
         <Testimonials />
         <Brands />
         <WhoThisIsFor />
@@ -28,7 +27,7 @@ export default function Home() {
         <Faq />
       </main>
 
-      <StickyOfferBar />
+      <OfferBar />
     </>
   );
 }

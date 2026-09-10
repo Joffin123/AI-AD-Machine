@@ -5,18 +5,16 @@ import { CalendarIcon, ClockIcon } from "@/components/ui/icons";
 import { OfferTimer } from "@/components/offer-timer";
 import { EVENT } from "@/lib/site-data";
 
-function PriceBlock({ compact = false }: { compact?: boolean }) {
+function PriceBlock() {
   return (
     <div className="shrink-0">
       <p className="font-bold leading-none text-ink">
-        <span className={compact ? "text-base" : "text-[21px]"}>
+        <span className="text-[21px]">
           <span className="line-through decoration-ink/60">
             {EVENT.priceOriginal}
           </span>
         </span>{" "}
-        <span className={compact ? "text-2xl" : "text-[31px]"}>
-          {EVENT.price}
-        </span>
+        <span className="text-[31px]">{EVENT.price}</span>
       </p>
       <p className="mt-0.5 text-[11px] text-ink/90">
         (Offer Ends in <OfferTimer />)
@@ -70,24 +68,11 @@ function BarButton({
   );
 }
 
-/** The static acid bar that sits directly beneath the hero. */
-export function OfferBar() {
-  return (
-    <div className="hidden bg-acid lg:block">
-      <div className="mx-auto flex w-full max-w-[1296px] items-center justify-between gap-8 px-8 py-4">
-        <PriceBlock />
-        <Schedule />
-        <BarButton label="Register for the Masterclass" />
-      </div>
-    </div>
-  );
-}
-
 /**
  * Persistent conversion bar. Slides up once the hero has scrolled away and
- * stays docked to the bottom of the viewport.
+ * stays docked to the bottom of the viewport. Desktop only for now.
  */
-export function StickyOfferBar() {
+export function OfferBar() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -99,26 +84,14 @@ export function StickyOfferBar() {
 
   return (
     <div
-      className={`fixed inset-x-0 bottom-0 z-50 border-t border-ink/10 bg-acid transition-transform duration-500 ease-[var(--ease-out-expo)] ${
+      className={`fixed inset-x-0 bottom-0 z-50 hidden bg-acid transition-transform duration-500 ease-[var(--ease-out-expo)] lg:block ${
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1440px] items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:gap-8 lg:px-12 lg:py-6">
-        <PriceBlock compact />
-
-        <div className="hidden lg:block">
-          <Schedule />
-        </div>
-
-        <div className="relative">
-          <span className="absolute -top-6 left-1/2 hidden -translate-x-1/2 whitespace-nowrap rounded-full border border-acid-2 bg-cream px-4 py-1.5 text-[13px] font-semibold text-ink lg:block">
-            {EVENT.seatsLabel}
-          </span>
-          <BarButton
-            label="Reserve my seat"
-            className="whitespace-nowrap lg:px-10 lg:py-5 lg:text-xl"
-          />
-        </div>
+      <div className="mx-auto flex w-full max-w-[1296px] items-center justify-between gap-8 px-8 py-4">
+        <PriceBlock />
+        <Schedule />
+        <BarButton label="Register for the Masterclass" />
       </div>
     </div>
   );

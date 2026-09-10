@@ -5,19 +5,9 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { CurriculumIcon } from "@/components/ui/icons";
 import { EVENT, PASS_PERKS, STUDIO_PERKS } from "@/lib/site-data";
 
-/** Hand-drawn looking blob silhouettes, one per studio perk. */
-const BLOB_SHAPES = [
-  "62% 38% 40% 60% / 45% 42% 58% 55%",
-  "38% 62% 58% 42% / 55% 60% 40% 45%",
-  "58% 42% 62% 38% / 42% 58% 45% 55%",
-  "42% 58% 38% 62% / 58% 45% 55% 40%",
-  "60% 40% 55% 45% / 40% 55% 45% 62%",
-  "45% 55% 42% 58% / 62% 40% 58% 42%",
-];
-
 export function WebinarExtras() {
   return (
-    <section className="relative overflow-hidden bg-cream py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-cream pb-6 pt-16 sm:pb-8 sm:pt-20 lg:pb-8 lg:pt-24">
       <div className="mx-auto w-full max-w-[1296px] px-5 sm:px-8">
         <SectionHeading>More Than Just a Webinar</SectionHeading>
 
@@ -72,7 +62,8 @@ export function WebinarExtras() {
           </p>
         </Reveal>
 
-        <ul className="mt-8 grid gap-8 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12">
+
+        <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:mt-12 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-8">
           {STUDIO_PERKS.map((perk, index) => (
             <Reveal
               key={perk.title}
@@ -80,27 +71,17 @@ export function WebinarExtras() {
               delay={(index % 3) * 110}
               className="h-full"
             >
-              <article className="group flex h-full flex-col items-center text-center">
-                <div
-                  className="relative flex aspect-square w-full max-w-[300px] items-center justify-center bg-white p-8 transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:-translate-y-2 group-hover:rotate-1"
-                  style={{ borderRadius: BLOB_SHAPES[index] }}
-                >
-                  <SmartImage
-                    src={perk.image}
-                    alt=""
-                    width={260}
-                    height={200}
-                    className="h-auto w-[72%] object-contain transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105"
-                  />
-                </div>
-
-                <h3 className="mt-5 text-balance font-display text-[15px] font-semibold text-ink lg:text-[17px]">
-                  {perk.title}
-                </h3>
-                <p className="mt-2 max-w-[280px] text-pretty font-display text-xs leading-relaxed text-ink lg:text-[13px]">
-                  {perk.body}
-                </p>
-              </article>
+              {/* The image is the whole card — shape, icon, title and body
+                  are all baked into the illustration itself. */}
+              <div className="group mx-auto flex h-full w-full max-w-[340px] items-center transition-transform duration-700 ease-[var(--ease-out-expo)] hover:-translate-y-2 hover:rotate-1">
+                <SmartImage
+                  src={perk.image}
+                  alt={`${perk.title} — ${perk.body}`}
+                  width={640}
+                  height={574}
+                  className="h-auto w-full object-contain transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:scale-105"
+                />
+              </div>
             </Reveal>
           ))}
         </ul>

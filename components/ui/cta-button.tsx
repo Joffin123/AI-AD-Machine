@@ -7,8 +7,6 @@ type CtaButtonProps = {
   showPrice?: boolean;
   /** Renders the ↗ glyph after the label. */
   showArrow?: boolean;
-  /** Floating "<xxx seats filled already.>" pill above the button. */
-  seatsBadge?: boolean;
   href?: string;
   className?: string;
   size?: "md" | "lg";
@@ -18,7 +16,6 @@ export function CtaButton({
   children,
   showPrice = true,
   showArrow = false,
-  seatsBadge = false,
   href = EVENT.registerUrl,
   className = "",
   size = "md",
@@ -30,12 +27,6 @@ export function CtaButton({
 
   return (
     <div className={`relative inline-flex max-w-full flex-col ${className}`}>
-      {seatsBadge && (
-        <span className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full border border-acid-2 bg-cream px-4 py-1.5 text-[12px] font-semibold text-ink sm:text-[13px]">
-          {EVENT.seatsLabel}
-        </span>
-      )}
-
       <a
         href={href}
         className={`group relative flex items-center justify-center gap-2 rounded-2xl bg-ink text-center font-bold text-cream shadow-cta transition-all duration-300 ease-[var(--ease-out-expo)] hover:-translate-y-0.5 hover:shadow-cta-lg active:translate-y-0 ${pad}`}

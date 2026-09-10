@@ -9,9 +9,9 @@ export function Future() {
   return (
     <section className="overflow-hidden bg-sage py-16 sm:py-20 lg:py-24">
       <div className="mx-auto w-full max-w-[1296px] px-5 sm:px-8">
-        <Reveal className="relative">
-          <CornerArrow className="mx-auto mb-4 h-8 w-8 text-ink lg:absolute lg:left-0 lg:top-4 lg:mb-0 lg:h-[42px] lg:w-[42px]" />
-          <h2 className="mx-auto max-w-[1000px] text-balance text-center text-[30px] font-bold leading-[1.15] tracking-[-0.01em] text-ink sm:text-5xl lg:text-6xl">
+        <Reveal className="relative mx-auto max-w-[1000px]">
+          <CornerArrow className="mx-auto mb-4 h-8 w-8 text-ink lg:absolute lg:-left-2 lg:top-1/2 lg:mb-0 lg:h-[42px] lg:w-[42px] lg:-translate-y-1/2" />
+          <h2 className="text-balance text-center text-[30px] font-bold leading-[1.15] tracking-[-0.01em] text-ink sm:text-5xl lg:text-6xl">
             The future isn’t just{" "}
             <span className="marker">AI-generated ads.</span> It’s{" "}
             <span className="marker">AI-generated ads that win.</span>

@@ -14,7 +14,7 @@ const EVENT_ITEMS = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-cream pb-14 pt-8 sm:pb-20 sm:pt-10 lg:pb-24 lg:pt-12">
+    <section className="relative overflow-hidden bg-cream pb-14 pt-8 sm:pb-20 sm:pt-10 lg:pb-16 lg:pt-12">
       {/* Decorative background */}
       <GridLines />
       <Blob className="-left-40 -top-48 h-[420px] w-[420px] lg:h-[572px] lg:w-[572px]" />
@@ -36,22 +36,27 @@ export function Hero() {
           <h1 className="mx-auto mt-6 max-w-[1150px] text-balance text-center text-[32px] font-bold leading-[1.12] tracking-[-0.02em] text-ink sm:text-5xl lg:mt-8 lg:text-[66px]">
             {HERO.headingLines[0]}{" "}
             <span className="lg:block">
-              {HERO.headingLines[1].replace(HERO.headingCircled, "")}
-              <span className="relative inline-block">
-                {HERO.headingCircled}
+              {/* Explicit z-10 (not just document order) so the circled
+                  span's oversized loop — which bleeds left into this text —
+                  paints behind it too, not just behind the circled words. */}
+              <span className="relative z-10">
+                {HERO.headingLines[1].replace(HERO.headingCircled, "")}
+              </span>
+              <span className="relative z-0 inline-block">
+                <span className="relative z-[1]">{HERO.headingCircled}</span>
                 {/* Sits outside the text's own box (not clipped to it) so
                     the loop can bleed past the words on every side, per the
                     design. Desktop only — at narrower widths the heading
                     reflows, and a fixed loop would drift off the phrase. */}
                 <CircleScribble
-                  className="pointer-events-none absolute left-1/2 top-[58%] hidden h-[135%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 text-acid lg:block"
+                  className="pointer-events-none absolute left-1/2 top-[58%] z-0 hidden h-[135%] w-[122%] max-w-none -translate-x-1/2 -translate-y-1/2 text-acid lg:block"
                 />
               </span>
             </span>
           </h1>
         </Reveal>
 
-        <div className="relative mt-10 grid items-center gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 xl:grid-cols-[minmax(0,1fr)_360px]">
+        <div className="relative mt-10 grid items-center gap-10 lg:mt-14 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-8 xl:grid-cols-[minmax(0,1fr)_390px] xl:gap-10">
           {/* Sub-headline */}
           <Reveal
             delay={140}
@@ -73,7 +78,7 @@ export function Hero() {
           <Reveal
             from="zoom"
             delay={200}
-            className="relative z-10 mx-auto w-full max-w-[335px] lg:col-start-2 lg:row-span-3 lg:row-start-1"
+            className="relative z-10 mx-auto w-full max-w-[335px] lg:col-start-2 lg:row-span-3 lg:row-start-1 lg:mx-0 lg:mr-auto lg:max-w-[340px]"
           >
             <ProducerCard />
           </Reveal>

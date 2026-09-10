@@ -4,7 +4,6 @@ export const EVENT = {
   timeLabel: "XX:XX (IST)",
   durationLabel: "5 hours",
   platformLabel: "On Zoom",
-  seatsLabel: "<xxx seats filled already.>",
   priceOriginal: "₹1,999",
   price: "₹499",
   /** Countdown length for the offer timer, in seconds. */
@@ -85,23 +84,27 @@ export const AUDIENCE = [
   },
   {
     title: "You are tired of expensive, slow ad production",
-    body: "Shoots. Crews. Editors. Agencies. Back-and-forth. Creating a new creative shouldn't always require an entire production setup.",
+    highlight: true,
+    body: "Shoots. Crews. Editors. Agencies. Back-and-forth.\nCreating a new creative shouldn't always require an entire production setup.",
     image: "/illustrations/audience-2.png",
   },
   {
     title: "You are overwhelmed by AI tools with no clear workflow",
-    body: "Every week there's another tool. Another tutorial. Another “game-changing” AI platform. But knowing 10 tools doesn't mean you know how to make one good ad.",
+    highlight: true,
+    body: "Every week there's another tool. Another tutorial. Another “game-changing” AI platform.\nBut knowing 10 tools doesn't mean you know how to make one good ad.",
     image: "/illustrations/audience-3.png",
   },
   {
     title: "You need more creative variations to test",
+    highlight: true,
     body: "One ad isn't enough. You need different hooks, scripts, angles and creative approaches to understand what actually resonates.",
-    image: "/illustrations/audience-4.png",
+    image: "/illustrations/audience-5.png",
   },
   {
     title: "You want to stay ahead of AI-driven advertising",
+    highlight: true,
     body: "AI is changing the production side of advertising rapidly. You don't need to become an AI expert. You need to understand how to use it strategically.",
-    image: "/illustrations/audience-5.png",
+    image: "/illustrations/audience-4.png",
   },
 ];
 
@@ -155,32 +158,32 @@ export const STUDIO_PERKS = [
   {
     title: "50+ Hook & Script Templates",
     body: "A ready-to-use vault to help you create stronger ads faster.",
-    image: "/illustrations/perk-1.svg",
+    image: "/illus-1.png",
   },
   {
     title: "AI Assistant + Competitor Analysis",
     body: "Get AI-powered support and free competitor analysis through the community.",
-    image: "/illustrations/perk-2.svg",
+    image: "/illus-2.png",
   },
   {
     title: "Community Credit Pricing",
     body: "Get ongoing credits at a rate lower than the public price.",
-    image: "/illustrations/perk-3.svg",
+    image: "/illus-3.png",
   },
   {
     title: "Real Brand Work Opportunities",
     body: "Get listed in the talent pool for potential brand-work referrals.",
-    image: "/illustrations/perk-4.svg",
+    image: "/illus-4.png",
   },
   {
     title: "Weekly Rewards & Recognition",
     body: "Weekly credit bounties, Creative of the Week and certification.",
-    image: "/illustrations/perk-5.svg",
+    image: "/illus-5.png",
   },
   {
     title: "Optional DFY Starter Pack",
     body: "Get extra credits + 10 done-for-you ad templates for ₹5,999.",
-    image: "/illustrations/perk-6.svg",
+    image: "/illus-6.png",
   },
 ];
 
@@ -243,38 +246,38 @@ export const FAQS = [
   },
   {
     q: "Do I need any editing or design experience?",
-    a: "No. The masterclass is built around thinking and workflow, not software skill. If you can write a sentence and describe an idea, you can follow along.",
+    a: "No. You don't need a professional editing or design background to attend the masterclass.",
   },
   {
     q: "Do I need to be technical to learn this?",
-    a: "Not at all. Everything is taught step by step, with the focus on the creative decisions rather than the technology behind them.",
+    a: "No. The session is designed around a practical workflow and focuses on the advertising thinking behind the process.",
   },
   {
     q: "How will I join the masterclass?",
-    a: "You will receive a Zoom link on your registered email and WhatsApp number shortly before the session begins.",
+    a: "The Zoom link and all important details will be shared on your registered email ID and WhatsApp group before the session begins.",
   },
   {
     q: "Do I need expensive software?",
-    a: "No. Everything demonstrated runs on a single laptop using accessible AI tools. You will not need a studio, a crew or a production budget.",
+    a: "No. The focus is on understanding a streamlined AI-powered workflow rather than building a complicated stack of subscriptions.",
   },
   {
     q: "Will the ads actually look professional?",
-    a: "Yes. The workflow is the same one used to ship ads for brands at scale — the difference is that it is built around performance, not just polish.",
+    a: "The focus isn't simply on making AI videos look good. You'll learn the creative and performance principles that go into building stronger advertising creatives.",
   },
   {
     q: "What language is the masterclass in?",
-    a: "The session is conducted in English, with simple explanations throughout.",
+    a: "English, with Hindi/Hinglish mixed in to keep the session approachable and easy to follow.",
   },
   {
     q: "Who is this masterclass for?",
-    a: "Founders, marketers, creators and agency teams who want to make AI ads that actually perform rather than just look good.",
+    a: "D2C founders, business owners, performance marketers, in-house creatives, freelancers and creators who want to understand AI-powered performance advertising.",
   },
   {
     q: "What do I get for ₹499?",
-    a: "A 5-hour live masterclass, a live Q&A session, and an exclusive fast-action offer on AI Ad Machine Studio for attendees who stay till the end.",
+    a: "You get access to the complete 5-hour live masterclass, including the end-to-end ad walkthrough, performance frameworks and live Q&A.",
   },
   {
     q: "What happens after the masterclass?",
-    a: "You can continue on your own with the workflow you have learned, or join AI Ad Machine Studio for templates, credits, community and ongoing support.",
+    a: "You'll have the option to continue learning through AI Ad Machine Studio, a separate 21-day live program. Joining it is completely optional.",
   },
 ];

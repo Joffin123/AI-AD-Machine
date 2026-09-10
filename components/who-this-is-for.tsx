@@ -4,7 +4,7 @@ import { AUDIENCE } from "@/lib/site-data";
 
 export function WhoThisIsFor() {
   return (
-    <section className="bg-cream pb-16 pt-6 sm:pb-24 lg:pb-32">
+    <section className="bg-cream pb-12 pt-6 sm:pb-16 lg:pb-20">
       <div className="mx-auto w-full max-w-[1296px] px-5 sm:px-8">
         <Reveal>
           <h2 className="text-center text-[28px] font-bold leading-[1.15] tracking-[-0.01em] text-ink sm:text-4xl lg:text-5xl">
@@ -39,7 +39,7 @@ export function WhoThisIsFor() {
                         <span className="text-ink">{item.title}</span>
                       )}
                     </h3>
-                    <p className="font-display text-pretty text-[11px] font-light leading-relaxed text-ink sm:text-sm lg:text-[22px] lg:font-normal">
+                    <p className="whitespace-pre-line font-display text-pretty text-[11px] font-light leading-relaxed text-ink sm:text-sm lg:text-[22px] lg:font-normal">
                       {item.body}
                     </p>
                   </div>

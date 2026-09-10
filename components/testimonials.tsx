@@ -35,7 +35,7 @@ export function Testimonials() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-cream py-14 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-cream pb-14 pt-14 sm:pb-20 sm:pt-14 lg:pb-24 lg:pt-16">
       <div className="mx-auto w-full max-w-[1296px] px-5 sm:px-8">
         <Reveal className="mx-auto max-w-[1000px] text-center">
           <h2 className="text-balance text-[28px] font-bold leading-[1.15] tracking-[-0.01em] text-ink sm:text-4xl lg:text-5xl">
@@ -92,7 +92,7 @@ export function Testimonials() {
         </div>
 
         <Reveal delay={120} className="mt-10 flex justify-center lg:mt-14">
-          <CtaButton seatsBadge>Register for the Masterclass</CtaButton>
+          <CtaButton size="lg" className="[&>a]:px-12 [&>a]:py-6 [&>a]:text-xl sm:[&>a]:text-2xl md:[&>a]:text-[26px]">Register for the Masterclass</CtaButton>
         </Reveal>
       </div>
     </section>

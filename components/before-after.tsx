@@ -15,7 +15,7 @@ const PIPELINE = [
 
 export function BeforeAfter() {
   return (
-    <section className="overflow-hidden bg-cream py-16 sm:py-20 lg:py-24">
+    <section className="overflow-hidden bg-cream pb-16 pt-6 sm:pb-20 sm:pt-8 lg:pb-24 lg:pt-8">
       <div className="mx-auto w-full max-w-[1296px] px-5 sm:px-8">
         <SectionHeading subtitle="By the end of the masterclass, you'll have a clearer understanding of how to approach AI-powered advertising from a performance-first perspective.">
           Don&apos;t leave with another AI tool. Leave with a high-value skill.
