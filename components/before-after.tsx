@@ -54,7 +54,7 @@ export function BeforeAfter() {
               {BEFORE.map((line) => (
                 <li
                   key={line}
-                  className="font-display text-[13px] leading-snug text-ink opacity-65 lg:text-[22px]"
+                  className="text-center font-display text-[13px] leading-snug text-ink opacity-65 lg:text-left lg:text-[22px]"
                 >
                   {line}
                 </li>
@@ -66,13 +66,16 @@ export function BeforeAfter() {
             <h3 className="font-display text-center text-xl font-bold text-ink lg:text-[32px]">
               After
             </h3>
-            <ul className="mt-5 space-y-4 lg:mt-6 lg:space-y-6">
+            {/* w-fit + mx-auto centers the list as one block, keeping each
+                row left-aligned internally so the checkmarks stay in a
+                straight column instead of drifting with each line's length. */}
+            <ul className="mx-auto mt-5 w-fit max-w-full space-y-4 lg:mt-6 lg:w-auto lg:space-y-6">
               {AFTER.map((line) => (
                 <li key={line} className="group flex items-center gap-4">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-acid transition-transform duration-300 ease-[var(--ease-out-expo)] group-hover:scale-110 lg:h-10 lg:w-10">
                     <CheckIcon className="h-[18px] w-[18px] text-ink lg:h-6 lg:w-6" />
                   </span>
-                  <span className="font-display text-[12px] leading-snug text-ink lg:text-[22px]">
+                  <span className="text-left font-display text-[12px] leading-snug text-ink lg:text-[22px]">
                     {line}
                   </span>
                 </li>
